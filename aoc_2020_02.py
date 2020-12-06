@@ -1016,9 +1016,7 @@ for record in records:
     at_index_one = (pw[min_count - 1] == ch)
     at_index_two = (pw[max_count - 1] == ch)
 
-    if at_index_one and not at_index_two:
-        part_two_total += 1
-    if at_index_two and not at_index_one:
+    if at_index_one ^ at_index_two:
         part_two_total += 1
 
 print("total for part one is {}".format(part_one_total))
